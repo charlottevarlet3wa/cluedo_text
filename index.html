@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Jeu de Cluedo Interactif</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #log-output {
+            width: 100%;
+            height: 300px;
+            overflow-y: scroll;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 5px;
+            font-family: monospace;
+        }
+        textarea { width: 95%; height: 100px; margin-top: 20px; }
+        button { padding: 10px 20px; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Jeu de Cluedo Interactif</h1>
+    <div id="log-output"></div>
+    <textarea id="js-input" placeholder="Entrez votre code JavaScript ici..."></textarea><br>
+    <button onclick="runUserCode()">Exécuter le Code</button>
+    <pre>        const player = {
+        name: name,
+        cards: [],
+        currentRoom: null,
+
+        moveTo: function(room) {
+            this.currentRoom = room;
+        },
+
+        showCard: function(card) {
+            console.log("Showing card:", card);
+        },
+
+        makeSuggestion: function(suggestion) {
+            console.log(`${this.name} suggests:`, suggestion);
+        },
+
+        makeAccusation: function(accusation) {
+            console.log(`${this.name} accuses:`, accusation);
+        }
+    };</pre>
+<script src="script.js"></script>
+</body>
+</html>
